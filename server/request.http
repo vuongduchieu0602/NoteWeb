@@ -1,0 +1,49 @@
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"abcd",
+    "password":"abcd"
+}
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"abcd",
+    "password":"abcd"
+}
+
+###
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjJjNTcxZjZmZTRlNGFlYTVhYTJhNmUiLCJpYXQiOjE2NDcwNzQ3NTJ9.5bAAfksBd9eqCiT0E8HD3CwSIXF2mkoBUgAXktMFkxg
+
+{
+    "title":"CSS",
+    "description":"CSS",
+    "url":"css.com",
+    "status":"TO LEARN"
+}
+
+###
+GET http://localhost:8080/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjJjNTcxZjZmZTRlNGFlYTVhYTJhNmUiLCJpYXQiOjE2NDcwNzM0MzF9.XkkrNp7CFsJSONwJCtJcR8tTgQB2AxNJpRKvoU-xkNQ
+
+###
+PUT http://localhost:8080/api/posts/622c5dd3edd4b0c1b48250e0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjJjNTcxZjZmZTRlNGFlYTVhYTJhNmUiLCJpYXQiOjE2NDcwNzQ3ODF9.PWspT-LW2oz6H5wYajzFUBi-xerpeCJg4Ut-xEbKx8Y
+
+{
+    "title":"HTML",
+    "description":"HyperText Markup Language",
+    "url":"HTML.com"
+}
+
+###
+
+DELETE http://localhost:8080/api/posts/622c572c6fe4e4aea5aa2a71
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjJjNTcxZjZmZTRlNGFlYTVhYTJhNmUiLCJpYXQiOjE2NDcwNzQ3ODF9.PWspT-LW2oz6H5wYajzFUBi-xerpeCJg4Ut-xEbKx8Y
